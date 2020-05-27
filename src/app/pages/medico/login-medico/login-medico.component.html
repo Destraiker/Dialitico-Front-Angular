@@ -1,0 +1,6 @@
+<form #formLoginMedico="ngForm" (ngSubmit)="onSubmit(formLoginMedico)">
+    <h3>Login Medico:</h3>
+    <input type="text" [(ngModel)]="medico.Login" name="Login" placeholder="Login">
+    <input type="password" [(ngModel)]="medico.Senha" name="Senha" placeholder="Senha">
+    <button type="submit">Publicar</button>
+</form>

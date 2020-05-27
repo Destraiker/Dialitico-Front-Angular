@@ -1,0 +1,7 @@
+<form #formCadastroUsuario="ngForm" (ngSubmit)="onSubmit(formCadastroUsuario)">
+    <h3>Cadastro Usuario:</h3>
+    <input type="text" [(ngModel)]="usuario.Nome" name="Nome" placeholder="Nome">
+    <input type="text" [(ngModel)]="usuario.CPF" name="CPF" placeholder="CPF">
+    <input type="text" [(ngModel)]="usuario.Senha" name="Senha" placeholder="Senha">
+    <button type="submit">Publicar</button>
+</form>

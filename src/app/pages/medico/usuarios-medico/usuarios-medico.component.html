@@ -1,0 +1,19 @@
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nome</th>
+        <th scope="col">CPF</th>
+        <th scope="col">Ver mais</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of usuarios">
+        <th scope="row">{{usuario.idUsuario}}</th>
+        <td>{{usuario.Nome}}</td>
+        <td>{{usuario.CPF}}</td>
+        <td><button type="button" class="btn btn-primary" (click)="irDetalhes(usuario.idUsuario)">+</button></td>
+      </tr>
+    </tbody>
+  </table>

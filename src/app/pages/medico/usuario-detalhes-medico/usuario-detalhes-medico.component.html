@@ -1,0 +1,29 @@
+<div class="container">
+    <h4>Usuario: </h4>
+    <p>ID do usuario: {{usuario.idUsuario}}</p>
+    <p>Nome do usuario: {{usuario.Nome}}</p>
+    <p>Cpf do usuario: {{usuario.CPF}}</p>
+    <hr>
+    <h3>Dados:</h3>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Drenagem Inicia</th>
+                <th scope="col">Drenagem Final</th>
+                <th scope="col">Liquido</th>
+                <th scope="col">Data</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let dado of dados">
+                <th scope="row">{{dado.idDados}}</th>
+                <td>{{dado.Dreneagem_inicial}}</td>
+                <td>{{dado.Dreneagem_final}}</td>
+                <td>{{dado.Liquido}}</td>
+                <td>{{dado.Data_2}}</td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>

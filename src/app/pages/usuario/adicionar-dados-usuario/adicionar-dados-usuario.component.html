@@ -1,0 +1,8 @@
+<form #formCadastroDados="ngForm" (ngSubmit)="onSubmit(formCadastroDados)">
+    <h3>Cadastrar Dados:</h3>
+    <input type="number" [(ngModel)]="dados.Dreneagem_inicial" name="Dreneagem_inicial" placeholder="Dreneagem_inicial">
+    <input type="number" [(ngModel)]="dados.Dreneagem_final" name="Dreneagem_final" placeholder="Dreneagem_final">
+    <input type="number" [(ngModel)]="dados.Liquido" name="Liquido" placeholder="Liquido">
+    <input type="date" [(ngModel)]="dados.Data_2" name="Data_2" placeholder="Data">
+    <button type="submit">Publicar</button>
+</form>

@@ -1,0 +1,24 @@
+<div class="container">
+    <h4>Dados:</h4>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Drenagem Inicia</th>
+                <th scope="col">Drenagem Final</th>
+                <th scope="col">Liquido</th>
+                <th scope="col">Data</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let dado of dados">
+                <th scope="row">{{dado.idDados}}</th>
+                <td>{{dado.Dreneagem_inicial}}</td>
+                <td>{{dado.Dreneagem_final}}</td>
+                <td>{{dado.Liquido}}</td>
+                <td>{{dado.Data_2}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

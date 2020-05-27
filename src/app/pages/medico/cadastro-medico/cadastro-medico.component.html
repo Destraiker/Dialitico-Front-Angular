@@ -1,0 +1,8 @@
+<form #formCadastroMedico="ngForm" (ngSubmit)="onSubmit(formCadastroMedico)">
+    <h3>CadastroMedico:</h3>
+    <input type="text" [(ngModel)]="medico.Nome" name="Nome" placeholder="Nome">
+    <input type="text" [(ngModel)]="medico.Crm" name="Crm" placeholder="CRM">
+    <input type="text" [(ngModel)]="medico.Login" name="Login" placeholder="Login">
+    <input type="text" [(ngModel)]="medico.Senha" name="Senha" placeholder="Senha">
+    <button type="submit">Publicar</button>
+</form>
