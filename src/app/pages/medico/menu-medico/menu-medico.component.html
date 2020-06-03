@@ -1,10 +1,40 @@
-<h2>Menu Medico:</h2>
-<ul>
-    <li><a routerLink="/medico/">Inicio</a></li>
-    <li><a routerLink="/medico/cadastroUsuario">Cadastrar Usuario</a></li>
-    <li><a routerLink="/medico/usuarios">Usuarios</a></li>
-    <li><a routerLink="/medico/perfil">Perfil</a></li>
-    <li><a (click)="sair()">Sair</a></li>
-</ul>
 
-<router-outlet></router-outlet>
+<div id="wrapper" class="toggled">
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="#" routerLink="/medico/">
+                    Dialítico
+                </a>
+            </li>
+            <li style="color: white;">
+                {{nome}}
+            </li>
+            <br><br>
+            <li>
+                <a href="#" routerLink="/medico/">Inicio</a>
+            </li>
+            <br>
+            <li>
+                <a href="#" routerLink="/medico/cadastroUsuario">Cadastrar usuario</a>
+            </li>
+            <br>
+            <li>
+                <a href="" routerLink="/medico/usuarios">Listar usuarios</a>
+            </li>
+            <br>
+            <li>
+                <a href="#" routerLink="/medico/perfil">Perfil</a>
+            </li>
+            <br>
+            <li>
+                <a href="#" (click)="sair()">Sair</a>
+            </li>
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+    <router-outlet></router-outlet>
+
+</div>

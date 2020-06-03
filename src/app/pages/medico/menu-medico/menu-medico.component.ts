@@ -6,7 +6,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./menu-medico.component.css']
 })
 export class MenuMedicoComponent implements OnInit {
-
+  nome: string=localStorage.getItem('medicoNome');
   constructor(private router: Router) { }
 
   ngOnInit(): void {

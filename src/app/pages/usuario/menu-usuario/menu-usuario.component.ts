@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./menu-usuario.component.css']
 })
 export class MenuUsuarioComponent implements OnInit {
-
+  nome: string=localStorage.getItem('usuarioNome');
   constructor(private router: Router) { }
 
   ngOnInit(): void {
