@@ -1,24 +1,69 @@
-<div class="container">
-    <h4>Dados:</h4>
-    <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Drenagem Inicia</th>
-                <th scope="col">Drenagem Final</th>
-                <th scope="col">Liquido</th>
-                <th scope="col">Data</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let dado of dados">
-                <th scope="row">{{dado.idDados}}</th>
-                <td>{{dado.Dreneagem_inicial}}</td>
-                <td>{{dado.Dreneagem_final}}</td>
-                <td>{{dado.Liquido}}</td>
-                <td>{{dado.Data_2}}</td>
-
-            </tr>
-        </tbody>
-    </table>
+<!-- Page Content -->
+<div id="page-content-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Acompanhe a sua rotina</h3>
+                <p>Diálise é o processo de separação de moléculas de acordo com seu tamanho utilizando
+                membranas semipermeáveis que contêm poros. Na hemodiálise, a transferência de massa ocorre
+                entre o sangue e o líquido de diálise através de uma membrana semipermeável artificial.</p>
+            </div>
+        </div>
+        <body class="hm-gradient">
+            <main>
+                <!--MDB Tables-->
+                <div class="mt-4">
+                      <div class="card mb-4">
+                        <div class="card-body">
+                            <!-- Grid row -->
+                            <div class="row">
+                                <!-- Grid column -->
+                                <div class="col-md-12">
+                                    <h2 class="pt-3 pb-4 text-center font-bold font-up deep-purple-text">Ultimos dias</h2>
+                                    <div class="input-group md-form form-sm form-2 pl-0">
+                                        <input class="form-control my-0 py-1 pl-3 purple-border" type="text" placeholder="Pesquisar..." aria-label="Search">
+                                        <span class="input-group-addon waves-effect purple lighten-2" id="basic-addon1"><a><i class="fa fa-search white-text" aria-hidden="true"></i></a></span>
+                                    </div>
+                                </div>
+                                <!-- Grid column -->
+                            </div>
+                            <!-- Grid row -->
+                            <!--Table-->
+                            <table class="table table-striped">
+                                <!--Table head-->
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Drenagem INI.</th>
+                                        <th>Drenagem FIN.</th>
+                                        <th>Líquido</th>
+                                        <th>Horário</th>
+                                    </tr>
+                                </thead>
+                                <!--Table head-->
+                                <!--Table body-->
+                                <tbody>
+                                    <tr *ngFor="let dado of dados">
+                                        <th scope="row">{{dado.idDados}}</th>
+                                        <td>{{dado.Dreneagem_inicial}}</td>
+                                        <td>{{dado.Dreneagem_final}}</td>
+                                        <td>{{dado.Liquido}}</td>
+                                        <td>{{dado.Data_2}}</td>
+                        
+                                    </tr>
+                                </tbody>
+                                <!--Table body-->
+                            </table>
+                            <!--Table-->
+                        </div>
+                    </div>
+                    
+                </div>
+                <!--MDB Tables-->
+              
+            </main>
+          
+        </body>
+    </div>
 </div>
+<!-- /#page-content-wrapper -->

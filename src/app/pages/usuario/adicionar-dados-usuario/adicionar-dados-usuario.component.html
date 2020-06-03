@@ -1,8 +1,51 @@
-<form #formCadastroDados="ngForm" (ngSubmit)="onSubmit(formCadastroDados)">
-    <h3>Cadastrar Dados:</h3>
-    <input type="number" [(ngModel)]="dados.Dreneagem_inicial" name="Dreneagem_inicial" placeholder="Dreneagem_inicial">
-    <input type="number" [(ngModel)]="dados.Dreneagem_final" name="Dreneagem_final" placeholder="Dreneagem_final">
-    <input type="number" [(ngModel)]="dados.Liquido" name="Liquido" placeholder="Liquido">
-    <input type="date" [(ngModel)]="dados.Data_2" name="Data_2" placeholder="Data">
-    <button type="submit">Publicar</button>
-</form>
+<div class="card bg-light">
+    <article class="card-body mx-auto" style="max-width: 400px;">
+        <h4 class="card-title mt-3 text-center">Inserir dados</h4>
+        <p class="text-center">Preencha as informações abaixo para cadastrar um novo dado!</p>
+        <p class="divider-text">
+            <span class="bg-light">GO</span>
+        </p>
+        <form #formCadastroDados="ngForm" (ngSubmit)="onSubmit(formCadastroDados)">
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                </div>
+                <input class="form-control" [(ngModel)]="dados.Dreneagem_inicial" name="Dreneagem_inicial"
+                    placeholder="Drenagem Inicial" type="text">
+            </div> <!-- form-group// -->
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                </div>
+                <input class="form-control" [(ngModel)]="dados.Dreneagem_final" name="Dreneagem_final"
+                    placeholder="Drenagem Final" type="text">
+            </div> <!-- form-group// -->
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                </div>
+                <input class="form-control" [(ngModel)]="dados.Liquido" name="Liquido" placeholder="Líquido"
+                    type="text">
+            </div> <!-- form-group// -->
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                </div>
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                    </div>
+                    <input name="" class="form-control" [(ngModel)]="dados.Data_2" name="Data_2" placeholder="Data"
+                        type="date">
+                </div> <!-- form-group// -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-danger btn-block" style="width: 360px;"> Cadastrar
+                            dado</button>
+                    </div>
+                </div> <!-- form-group end.// -->
+            </div>
+        </form>
+    </article>
+</div> <!-- card.// -->
