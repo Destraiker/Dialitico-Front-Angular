@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ElementRef } from '@angular/core';
 import { Usuario }from '../../../module/usuario-module/usuario-module.module';
 import { UsuarioServiceService }from '../../../service/usuario-service.service';
 
@@ -10,9 +10,11 @@ import { UsuarioServiceService }from '../../../service/usuario-service.service';
 export class CadastroUsuarioMedicoComponent implements OnInit {
   usuario: Usuario={} as Usuario;
 
-  constructor(private usuarioService: UsuarioServiceService) { }
+  constructor(private usuarioService: UsuarioServiceService,private elementRef: ElementRef) { }
 
   ngOnInit(): void {
+    let windowHeight:number = window.innerHeight;
+    document.getElementById('cartao').style.height= windowHeight+'px';
   }
 
   async onSubmit(form){

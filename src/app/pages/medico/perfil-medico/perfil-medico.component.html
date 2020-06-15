@@ -1,5 +1,68 @@
-<h4>Dados do medico</h4>
-<p>Nome: {{medico.Nome}}</p>
-<p>Crm: {{medico.Crm}}</p>
-<p>Login: {{medico.Login}}</p>
+<div class="d-flex align-items-center justify-content-center" id="pagina">
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action active">
+            {{medico.Nome}}
+        </a>
+        <a class="list-group-item list-group-item-action">CRM: {{medico.Crm}}</a>
+        <a class="list-group-item list-group-item-action">Login: {{medico.Login}}</a>
+        <a class="list-group-item list-group-item-action alterar" (click)="open(alterar)">Alterar</a>
+        <a class="list-group-item list-group-item-action deletar" (click)="open(deletar)">Deletar</a>
+    </div>
+</div>
 
+<ng-template #alterar let-c="close" let-d="dismiss">
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Alterar dados!</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <form #formCadastroMedico="ngForm" (ngSubmit)="onSubmit(formCadastroMedico)">
+        <div class="modal-body">
+
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                </div>
+                <input class="form-control" [(ngModel)]="medico.Nome" name="Nome" placeholder="Nome completo"
+                    type="text">
+            </div> <!-- form-group// -->
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                </div>
+                <input class="form-control" [(ngModel)]="medico.Crm" name="Crm" placeholder="CRM" type="text">
+            </div> <!-- form-group// -->
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                </div>
+            </div> <!-- form-group end.// -->
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                </div>
+                <input class="form-control" [(ngModel)]="medico.Login" name="Login" placeholder="Login" type="text">
+            </div> <!-- form-group// -->
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+            <button type="submit" class="btn btn-outline-dark">Confirmar</button>
+        </div>
+    </form>
+</ng-template>
+
+<ng-template #deletar let-c="close" let-d="dismiss">
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Deletar conta!</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <p>Tem certeza que deseja deletar sua conta?</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+        
+    </div>
+</ng-template>

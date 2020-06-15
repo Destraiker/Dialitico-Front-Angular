@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ElementRef } from '@angular/core';
 import { Usuario }from '../../../module/usuario-module/usuario-module.module';
 import { UsuarioServiceService }from '../../../service/usuario-service.service';
 import {Router} from '@angular/router';
@@ -11,9 +11,10 @@ import {Router} from '@angular/router';
 export class LoginUsuarioComponent implements OnInit {
   usuario: Usuario={} as Usuario;
   aux: any;
-  constructor(private usuarioService: UsuarioServiceService, private router: Router) { }
+  constructor(private usuarioService: UsuarioServiceService, private router: Router,private elementRef: ElementRef) { }
 
   ngOnInit(): void {
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#CE1515';
   }
 
   async onSubmit(form){

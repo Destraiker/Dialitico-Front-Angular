@@ -1,6 +1,30 @@
-<form #formLoginMedico="ngForm" (ngSubmit)="onSubmit(formLoginMedico)">
-    <h3>Login Medico:</h3>
-    <input type="text" [(ngModel)]="medico.Login" name="Login" placeholder="Login">
-    <input type="password" [(ngModel)]="medico.Senha" name="Senha" placeholder="Senha">
-    <button type="submit">Publicar</button>
-</form>
+<div fxLayout="row" fxLayoutAlign="center center" class="row-height">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Insira seus dados</h5>
+            <form class="form-signin" #formLoginMedico="ngForm" (ngSubmit)="onSubmit(formLoginMedico)">
+              <div class="form-group">
+                <input type="text" id="inputEmail" class="form-control" [(ngModel)]="medico.Login" name="Login" placeholder="Login" required autofocus>
+              </div>
+
+              <div class="form-group">
+                <input type="password" id="inputPassword" [(ngModel)]="medico.Senha" name="Senha" class="form-control" placeholder="Senha" required>
+              </div>
+
+              <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">Lembrar senha</label>
+              </div>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Entrar</button>
+              <hr class="my-4">
+              <div class="form-group">
+                <label class="text-center">Não possui conta? <a routerLink="/medico/cadastro" >Cadastre-se</a></label>
+              </div>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

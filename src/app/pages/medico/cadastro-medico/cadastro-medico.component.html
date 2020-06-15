@@ -1,49 +1,59 @@
-<div class="card bg-light">
-    <article class="card-body mx-auto" style="max-width: 400px;">
-        <h4 class="card-title mt-3 text-center">Cadastro</h4>
-        <p class="text-center"></p>
-        <p class="divider-text">
-            <span class="bg-light">GO</span>
-        </p>
-        <form #formCadastroMedico="ngForm" (ngSubmit)="onSubmit(formCadastroMedico)">
-            <div class="form-group input-group" style="width: 300px;">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-                </div>
-                <input class="form-control" [(ngModel)]="medico.Nome" name="Nome" placeholder="Nome completo"
-                    type="text">
-            </div> <!-- form-group// -->
-            <div class="form-group input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
-                </div>
-                <input class="form-control"[(ngModel)]="medico.Crm" name="Crm" placeholder="CRM" type="text">
-            </div> <!-- form-group// -->
-            <div class="form-group input-group">
-                <div class="input-group-prepend">
-                </div>
-            </div> <!-- form-group end.// -->
-            <div class="form-group input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
-                </div>
-                <input class="form-control" [(ngModel)]="medico.Login" name="Login" placeholder="Login" type="text">
-            </div> <!-- form-group// -->
-            <div class="form-group input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-                </div>
-                <input class="form-control" placeholder="Senha" [(ngModel)]="medico.Senha" name="Senha" type="password">
-            </div> <!-- form-group// -->
-            <div class="form-group input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-                </div>
-                <input class="form-control" placeholder="Confirmar senha" type="password">
-            </div> <!-- form-group// -->
-            <div class="form-group">
-                <button type="submit" class="btn btn-danger btn-block"> Criar Conta </button>
-            </div> <!-- form-group// -->
-        </form>
-    </article>
-</div> <!-- card.// -->
+<section class="intro-section">
+    <div fxLayout="row" fxLayoutAlign="center center" class="row-height">
+
+        <div class="bg-light " fxFlex="100%">
+            <div class="card bg-light" id="cartao">
+                <article class="card-body mx-auto" style="max-width: 400px;">
+                    <h4 class="card-title mt-3 text-center">Cadastro</h4>
+                    <br>
+                    <form #formCadastroMedico="ngForm" (ngSubmit)="onSubmit(formCadastroMedico)">
+                        <div class="form-group input-group" style="width: 300px;">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                            </div>
+                            <input class="form-control" [(ngModel)]="medico.Nome" name="Nome"
+                                placeholder="Nome completo" type="text">
+                        </div> <!-- form-group// -->
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                            </div>
+                            <input class="form-control" [(ngModel)]="medico.Crm" name="Crm" placeholder="CRM"
+                                type="text">
+                        </div> <!-- form-group// -->
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                            </div>
+                        </div> <!-- form-group end.// -->
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                            </div>
+                            <input class="form-control" [(ngModel)]="medico.Login" name="Login" placeholder="Login"
+                                type="text">
+                        </div> <!-- form-group// -->
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                            </div>
+                            <input class="form-control" placeholder="Senha" [(ngModel)]="medico.Senha" name="Senha"
+                                type="password">
+                        </div> <!-- form-group// -->
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                            </div>
+                            <input class="form-control" placeholder="Confirmar senha" type="password">
+                        </div> <!-- form-group// -->
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-danger btn-block"> Criar Conta </button>
+                        </div> <!-- form-group// -->
+                        <div class="form-group text-center">
+                            <label>Ja possui uma conta? <a href="" routerLink="/medico/login">Entrar</a></label>
+                        </div> <!-- form-group// -->
+                    </form>
+                </article>
+            </div> <!-- card.// -->
+        </div>
+    </div>
+</section>

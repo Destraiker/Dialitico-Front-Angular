@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import {Medico} from '../../../module/medico-module/medico-module.module'
 import {MedicoServiceService} from '../../../service/medico-service.service'
 import {Router} from '@angular/router';
@@ -13,9 +13,10 @@ export class LoginMedicoComponent implements OnInit {
   medico:Medico={} as Medico;
   aux:any;
 
-  constructor(private medicoService: MedicoServiceService, private router: Router) { }
+  constructor(private medicoService: MedicoServiceService, private router: Router,private elementRef: ElementRef) { }
 
   ngOnInit(): void {
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#CE1515';
   }
 
   async onSubmit(form) {
