@@ -1,1 +1,58 @@
-<p>inicio-usuario works!</p>
+<br>
+<div class="row container">
+    <div class="col-sm-6 " id="addLiquido">
+        <div class="card text-center">
+            <div class="card-header">
+                Adicionar liquido ao dia
+            </div>
+            <div class="card-body">
+                <form #adicionarLiquido="ngForm" (ngSubmit)="onSubmit(adicionarLiquido)">
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                        </div>
+                        <input class="form-control" [(ngModel)]="liquido" name="Liquido" placeholder="Drenagem Final"
+                            type="number">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> ML </span>
+                        </div>
+                    </div>
+                    <div class="form-group input-group">
+
+                        <button type="submit" class="btn btn-danger btn-lg btn-block"> Adicionar liquido</button>
+
+                    </div> <!-- form-group end.// -->
+                </form>
+            </div>
+            <div class="card-footer text-muted">
+                Data: {{dado?.Data_2}}
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6" id="liquidoTotal">
+        <div class="card text-center">
+            <div class="card-header">
+                Liquido total do dia
+            </div>
+            <div class="card-body text-center">
+                <h5 class="card-title">{{dado?.Liquido}} Ml</h5>
+            </div>
+            <div class="card-footer text-muted">
+                Data: {{dado?.Data_2}}
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12" style="display: none;" id="semDados">
+        <div class="card text-center">
+            <div class="card-header">
+                Dia não cadastrado!
+            </div>
+            <div class="card-body text-center">
+                <p>Para começar a cadastrar os liquidos do dia, primei cadastre-o <a routerLink="/usuario/adicionarDados">aqui</a></p>
+            </div>
+            <div class="card-footer text-muted">
+                Data: 
+            </div>
+        </div>
+    </div>
+</div>

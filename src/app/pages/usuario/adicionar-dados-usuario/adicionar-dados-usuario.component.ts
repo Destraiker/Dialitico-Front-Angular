@@ -8,11 +8,13 @@ import { DadosServiceService }from '../../../service/dados-service.service';
   styleUrls: ['./adicionar-dados-usuario.component.css']
 })
 export class AdicionarDadosUsuarioComponent implements OnInit {
-  dados:Dados={} as Dados;
+  dados:Dados={Liquido: 0} as Dados;
   aux: any;
   constructor(private dadosService: DadosServiceService) { }
 
   ngOnInit(): void {
+    let windowHeight:number = window.innerHeight;
+    document.getElementById('cartao').style.height= windowHeight+'px';
   }
 
   async onSubmit(form){

@@ -34,6 +34,11 @@ export class DadosServiceService {
     console.log(resposta);
     return resposta;
   }
+  async getDadosByData(data) {
+    let resposta = await this.http.get(this.backLink +'date/'+ data, { headers: this.headersUser }).toPromise();
+    console.log(resposta);
+    return resposta; 
+  }
   //Pegar um dado de um usuario quando o medico esta logado
   async getDadosByMedicoById(idDados) {
     let resposta = await this.http.get(this.backLink + "doctor/" + idDados, { headers: this.headersDoctor }).toPromise();
@@ -51,6 +56,13 @@ export class DadosServiceService {
   async putDados(Dados) {
     console.log("Inicializando o post");
     let resposta = await this.http.put(this.backLink, Dados, { observe: 'response', headers: this.headersUser }).toPromise();
+    console.log("Post finalizado");
+    console.log(resposta);
+    return resposta;
+  }
+  async putLiquido(Dados) {
+    console.log("Inicializando o post");
+    let resposta = await this.http.put(this.backLink+'/liquido', Dados, { observe: 'response', headers: this.headersUser }).toPromise();
     console.log("Post finalizado");
     console.log(resposta);
     return resposta;

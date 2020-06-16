@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,9 +8,10 @@ import { Router } from '@angular/router';
 })
 export class MenuUsuarioComponent implements OnInit {
   nome: string=localStorage.getItem('usuarioNome');
-  constructor(private router: Router) { }
+  constructor(private router: Router,private elementRef: ElementRef) { }
 
   ngOnInit(): void {
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#fff';
   }
 
   sair(){

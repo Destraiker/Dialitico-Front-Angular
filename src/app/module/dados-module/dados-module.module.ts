@@ -17,5 +17,5 @@ export interface Dados{
   Dreneagem_inicial: number;
   Dreneagem_final:number;
   Liquido:number; 
-  Data_2: Date;
+  Data_2: string;
 }

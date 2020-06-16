@@ -32,6 +32,7 @@ import{UsuarioGuardService} from './guards/usuario-guard.service';
 import {CookieService} from 'ngx-cookie-service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { DatePipe } from '@angular/common'; 
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     UsuarioGuardService,
     MedicoGuardService,
-    CookieService
+    CookieService,
+    DatePipe
   ],
   bootstrap: [AppComponent]
 })
