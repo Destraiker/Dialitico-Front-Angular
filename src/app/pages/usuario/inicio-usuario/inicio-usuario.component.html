@@ -1,4 +1,10 @@
 <br>
+<div class="row container text-center">
+    <div class="col-sm-12 ">
+        <h3>Bem vindo ao Dialitico </h3>
+    </div>
+</div>
+<br><br>
 <div class="row container">
     <div class="col-sm-6 " id="addLiquido">
         <div class="card text-center">
@@ -49,10 +55,11 @@
                 Dia não cadastrado!
             </div>
             <div class="card-body text-center">
-                <p>Para começar a cadastrar os liquidos do dia, primei cadastre-o <a routerLink="/usuario/adicionarDados">aqui</a></p>
+                <p>Para começar a cadastrar os liquidos do dia, primei cadastre-o <a
+                        routerLink="/usuario/adicionarDados">aqui</a></p>
             </div>
             <div class="card-footer text-muted">
-                Data: 
+                Data: {{dataHoje}}
             </div>
         </div>
     </div>

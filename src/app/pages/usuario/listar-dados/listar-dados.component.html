@@ -1,4 +1,5 @@
 <!-- Page Content -->
+<br>
 <div id="page-content-wrapper">
     <div class="container-fluid">
         <div class="row">
@@ -20,10 +21,7 @@
                                 <!-- Grid column -->
                                 <div class="col-md-12">
                                     <h2 class="pt-3 pb-4 text-center font-bold font-up deep-purple-text">Ultimos dias</h2>
-                                    <div class="input-group md-form form-sm form-2 pl-0">
-                                        <input class="form-control my-0 py-1 pl-3 purple-border" type="text" placeholder="Pesquisar..." aria-label="Search">
-                                        <span class="input-group-addon waves-effect purple lighten-2" id="basic-addon1"><a><i class="fa fa-search white-text" aria-hidden="true"></i></a></span>
-                                    </div>
+                                    
                                 </div>
                                 <!-- Grid column -->
                             </div>
@@ -33,22 +31,22 @@
                                 <!--Table head-->
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
-                                        <th>Drenagem INI.</th>
-                                        <th>Drenagem FIN.</th>
-                                        <th>Líquido</th>
-                                        <th>Horário</th>
+                                        <th class="text-center">ID</th>
+                                        <th class="text-center">Drenagem INI.</th>
+                                        <th class="text-center">Drenagem FIN.</th>
+                                        <th class="text-center">Líquido</th>
+                                        <th class="text-center">Horário</th>
                                     </tr>
                                 </thead>
                                 <!--Table head-->
                                 <!--Table body-->
                                 <tbody>
                                     <tr *ngFor="let dado of dados">
-                                        <th scope="row">{{dado.idDados}}</th>
-                                        <td>{{dado.Dreneagem_inicial}}</td>
-                                        <td>{{dado.Dreneagem_final}}</td>
-                                        <td>{{dado.Liquido}}</td>
-                                        <td>{{dado.Data_2}}</td>
+                                        <th scope="row" class="text-center">{{dado.idDados}}</th>
+                                        <td class="text-center">{{dado.Dreneagem_inicial}} ML</td>
+                                        <td class="text-center">{{dado.Dreneagem_final}} ML</td>
+                                        <td class="text-center">{{dado.Liquido}} ML</td>
+                                        <td class="text-center">{{dado.Data_2}}</td>
                         
                                     </tr>
                                 </tbody>

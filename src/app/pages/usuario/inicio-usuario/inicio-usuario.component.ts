@@ -13,6 +13,7 @@ export class InicioUsuarioComponent implements OnInit {
   dado: Dados = {} as Dados;
   liquido: number = 0;
   aux: any;
+  dataHoje=this.datePipe.transform(new Date(), 'yyyy-MM-dd');
 
   constructor(private datePipe: DatePipe, private dadosService: DadosServiceService, private router:Router) { }
 

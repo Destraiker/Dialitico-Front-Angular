@@ -23,7 +23,7 @@ export class CadastroUsuarioMedicoComponent implements OnInit {
       console.log(x);
       alert('Usuario cadastrado com suscesso!');
     }).catch((err)=>{
-      console.log("Deu erro: "+JSON.parse(err.body))
+      console.log(err)
     })
     
   }
